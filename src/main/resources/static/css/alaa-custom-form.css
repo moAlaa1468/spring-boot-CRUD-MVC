@@ -1,0 +1,64 @@
+/* Container for the form */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7; /* Light grey background */
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Form title */
+.form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Dark grey text */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Form labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555; /* Medium grey text */
+}
+
+/* Form inputs */
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box;
+}
+
+/* Form input focus effect */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    border-color: #007BFF; /* Blue border on focus */
+    outline: none;
+}
+
+/* Submit button */
+.btn-custom {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF; /* Blue background */
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Submit button hover effect */
+.btn-custom:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

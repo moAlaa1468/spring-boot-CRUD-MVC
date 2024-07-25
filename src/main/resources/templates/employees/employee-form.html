@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Form</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" type="text/css" href="/css/alaa-custom-form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Employee Form</h2>
+            <form th:action="@{/employees/save}" th:object="${employee}" method="post">
+<!--                we need to add hidden field to make update -->
+                <input type="hidden" th:field="${employee.id}" >
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" th:field="*{firstName}" placeholder="Enter first name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" th:field="*{lastName}" placeholder="Enter last name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" th:field="*{email}" placeholder="Enter email" required>
+                </div>
+<!--/employees/save      لما تعمل submit للفورم المفروض انها تباصي هذه المعلومات لل  -->
+                <button type="submit" class="btn-custom">Submit</button>
+            </form>
+            <hr>
+            <a th:href="@{/employees/list}">
+                back to Employees List
+            </a>
+        </div>
+    </div>
+</body>
+</html>
